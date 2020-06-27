@@ -115,24 +115,24 @@
 //     alert("We are sorry 🙁" +input +' is not available in our bakery');
 // }
 
-//Task # 15
-var pass = prompt("Enter password: ");
-for (var i = 0; i<pass.length;i++){
-    for (var j=48;j<58;j++){
-        if(j===(pass.charCodeAt(i))){var num = 1;}
-        if(j===(pass.charCodeAt(0))){var invalid = 0;}
-    }
-    for (var k=65;k<91;k++){
-        if(k===(pass.charCodeAt(i))){var alp = 1;}
-    }
-    for (var k=97;k<123;k++){
-        if(k===(pass.charCodeAt(i))){var alp = 1; }
-    }
-    if((num === 1 && alp === 1) && invalid!=0 && pass.length >= 6){var condition = 1; break; }
-    else{continue;}
-}
-if(condition === 1){document.write("Entered Password: "+pass+"<br>"+"Passwrod is correct")}
-else{document.write("Entered Password: "+pass+"<br>"+"Please insert a valid password")}
+// //Task # 15
+// var pass = prompt("Enter password: ");
+// for (var i = 0; i<pass.length;i++){
+//     for (var j=48;j<58;j++){
+//         if(j===(pass.charCodeAt(i))){var num = 1;}
+//         if(j===(pass.charCodeAt(0))){var invalid = 0;}
+//     }
+//     for (var k=65;k<91;k++){
+//         if(k===(pass.charCodeAt(i))){var alp = 1;}
+//     }
+//     for (var k=97;k<123;k++){
+//         if(k===(pass.charCodeAt(i))){var alp = 1; }
+//     }
+//     if((num === 1 && alp === 1) && invalid!=0 && pass.length >= 6){var condition = 1; break; }
+//     else{continue;}
+// }
+// if(condition === 1){document.write("Entered Password: "+pass+"<br>"+"Passwrod is correct")}
+// else{document.write("Entered Password: "+pass+"<br>"+"Please insert a valid password")}
 
 
 //Task # 16
@@ -181,12 +181,14 @@ else{document.write("Entered Password: "+pass+"<br>"+"Please insert a valid pass
 //Task # 2
 // var input = +prompt('Enter a negative floating point ')
 // var sign = Math.sign(input);
-// var roundOff = Math.round(input);
-// var floor = Math.floor(input);
-// var ceil = Math.ceil(input);
-// if (sign===-1){
-// document.write('number :' +input +"<br>");
-// document.write("round off value: " +roundOff +"<br>" +'floor value: ' +floor +"<br>" +'ceil value: ' +ceil)
+// if (input % 1 != 0){
+//     var roundOff = Math.round(input);
+//     var floor = Math.floor(input);
+//     var ceil = Math.ceil(input);
+//     if (sign===-1){
+//     document.write('number :' +input +"<br>");
+//     document.write("round off value: " +roundOff +"<br>" +'floor value: ' +floor +"<br>" +'ceil value: ' +ceil)
+//     }   
 // }
 // else{
 //     alert('Enter a negative floating point number')
@@ -332,7 +334,245 @@ else{document.write("Entered Password: "+pass+"<br>"+"Please insert a valid pass
 // alert(d)
 
 
+// //Task # 9
+// var date = new Date();
+// var ramdan = new Date (2020 , 03 , 24);
+// var dateTime = date.getTime();
+// var ramdanTime = ramdan.getTime();
+// var passDays = dateTime-ramdanTime;
+// var totalPassDays = passDays/(1000*60*60*24);
+// var result=Math.floor(totalPassDays)
+// alert(result +' days have been passed since 1st Ramdan , 2020');
+
+//Task # 10
+// var reference = new Date( "Sat Dec 05 2015 22:50:16 GMT +0500(PKT)");
+// var referenceSec = reference.getTime();
+// var date = new Date ("2015");
+// var dateSec = date.getTime();
+// var elapsed = referenceSec-dateSec;
+// var totalPassed = elapsed/(1000); 
+// var finalsPass=Math.floor(totalPassed);
+// document.write('On reference date ' +reference +"<BR>" + finalsPass +" seconds had passed since beginning of 2015")
+
+// Task # 11
+// var date = new Date();
+// var hour = date.getHours();
+// var previous_date= new Date(); 
+// previous_date.setHours(hour-1);
+// document.write('Current date: ' +date +"<br>" +'1 hour age, it was ' +previous_date)
+
+//Task # 12
+// var date = new Date();
+// var year = date.getFullYear();
+// var pre_year = new Date();
+// pre_year.setFullYear(year - 100);
+// document.write('Current date: ' + date +"<br>" + '100 years back, it was ' +pre_year)
+
+
+//Task # 13
+// var age = prompt('Enter your age');
+// var date = new Date();
+// var Year = date.getFullYear();
+// var birthYear = Year- age;
+// document.write('Your age is ' +age+"<br>" + 'Your birth year is ' +birthYear);
+
+//Task  # 14
+// var name = prompt('Enter your name ');
+// var month = prompt('Enter month');
+// var units = +prompt('Enter units');
+// var charges = +prompt('What are charges per unit ?');
+// var netAmount = units*charges;
+// var payment_surcharges = +prompt('Enter late payment subcharges');
+// var payment_after_date = netAmount+payment_surcharges;
+// document.write('Customer Name: ' +name +"<br>");
+// document.write('Month: ' +month+"<br>");
+// document.write('Number of units: ' + units.toFixed(2)+"<br>");
+// document.write('Charges per unit: ' +charges.toFixed(2)+"<br><br>");
+// document.write('Net Amount Payable (within Due Date): '+netAmount.toFixed(2)+"<br>");
+// document.write('Late payment surcharges: ' +payment_surcharges+"<br>")
+// document.write('Gross Amount Payable (after Due Date): ' +payment_after_date)
+
+
+//Chapters 35-38
+
+//Task # 1
+// function date(){
+//     var d=new Date();
+//     alert(d)
+// }
+// date();
+
+
+//Task # 2
+// var firstName = prompt('Enter your first name');
+// var lastName = prompt('Enter your last name');
+// function greetUser (){
+
+//     alert(firstName.concat( " " , lastName));
+// }
+// greetUser();
+
+//Task # 3
+// var firstNumber = +prompt('Enter your first number');
+// var lastNumber = +prompt('Enter your last number');
+// function add() {
+//     sum = firstNumber + lastNumber;
+//     return sum;
+// }
+// document.write(add());
+
+//Task # 4
+// var num1 = +prompt('Enter first number')
+// var operator = prompt('Type operator');
+// var num2 = +prompt('Enter second number');
+// function cal(num1, operator, num2) {
+//     if (operator === "+") {
+//         return num1 + num2;
+//     }
+//     else if (operator === "-") {
+//         return num1 - num2;
+//     }
+//     else if (operator === "*") {
+//         return num1 * num2;
+//     }
+//     else if (operator === "/") {
+//         return num1 / num2;
+//     }
+//     else if (operator === "%") {
+//         return num1 % num2;
+//     }
+// }
+// document.write(cal(num1 ,operator, num2))
+
+//Task # 5
+// var sq = +prompt("Enter an integer")
+// function square(sq){
+//     var result = sq ** 2;
+//     return result;
+// }
+// document.write(square(sq))
+
+//Task # 6
+// var ans = 1;
+// var n = +prompt('Enter a number');
+// function fac(n){
+//     if (n === 0 || n===1){
+//         return ans;
+//     }
+//     else{
+//         for(var i = n ; i>=1 ; i--){
+//             ans = ans*i
+
+//         }
+//         return ans;
+//     }
+
+// }
+// document.write(fac(n));
+
+//Task # 7
+// var startNum = +prompt('Enter starting number');
+// var endNum = +prompt('Enter ending number');
+
+// function counting(startNum , endNum){
+//     for (var i = startNum ; i<=endNum ; i++){
+
+//         document.write(i +"<BR>");
+
+//     }
+
+// }
+// counting(startNum , endNum)
+
+//Task # 8
+// function calculateHypotenuse(base , perpendicular){
+//     var hypotenuse = Math.sqrt(calculateSquare(base) + calculateSquare(perpendicular));
+//     function calculateSquare(square){
+//         var sqr = square**2;
+//         return sqr;
+//     }
+//     return hypotenuse;
+// }
+// document.write(calculateHypotenuse(13 , 13))
+
+//Task # 9 
+// var height = 8
+// function area(width , height ){
+// var A = width * height;
+// return A;
+// }
+// document.write('Area is ' +area(4 , height));
+
+//Task # 10
+// var str = prompt('Please write something');
+// var check = "";
+// str = str.toLowerCase();
+// function palindrome (str){
+// for (var i = str.length-1 ; i >=0 ; i-- ){
+//     check += str[i];
+// }
+// if (str ===check){
+//     document.write('This is a palindrome word')
+// }
+// }
+// palindrome((str));
+
+//Task # 11
+// var str = prompt('Write something');
+// function conversion(str) {
+//     str = str.split(' ');
+//     var arr1 = [];
+//     for(var i =0 ; i <str.length  ; i++){
+//         arr1.push(str[i].charAt(0).toUpperCase()+str[i].slice(1));
+//     }
+//     return arr1.join(' ')}
+
+//     var a =  conversion((str))
+//    document.write( "EXAMPLE STRING : " +str +"<br> " +"EXPECTED OUTPUT :"+a );
 
 
 
+//Task # 12
+// var str = prompt('Write any sentence');
+// str = str.split(' ');
+// var result = str[0];
+// function logest(str){
 
+//     for(var i = 0 ; i<str.length ; i++){
+//         if(result.length < str[i].length){
+//             result = str[i]
+//         }
+//     }
+//     return result;
+// }
+// document.write(logest((str)));
+
+//task # 13
+
+function myFunction(string, letter) {
+    var i = 0;
+    for (count in string) {
+        if (string[count] === letter) {
+            i++;
+        }
+    }
+    document.write("The word " + letter + " comes in " + string + " " + i + " times");
+    
+}
+var ans = myFunction("JSResourceS.com", "o")
+
+
+//Task 14
+// var radius = +prompt("Enter radius to find circumference");
+// function calcCircumference(radius){
+//     var pi = Math.PI;
+//     var circumference = Math.round((2 * pi * radius));
+//     return circumference;
+// }
+// function calcArea(radius){
+//     var pi = Math.PI;
+//     var circumference = Math.round((pi * (radius**2)));
+//     return circumference;
+// }
+// document.write("The circumference is "+calcCircumference(radius)+ "<br>" )
+// document.write("The area is "+calcArea(radius))
